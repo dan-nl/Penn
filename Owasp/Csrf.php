@@ -1,5 +1,5 @@
 <?php
-namespace Penn;
+namespace Penn\Owasp;
 
 use Penn\Php\Exception;
 use Penn\Php\Session;
