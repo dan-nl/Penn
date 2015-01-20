@@ -5,9 +5,9 @@
  */
 namespace	Penn;
 
-use	Penn\Php\Exception;
 use Penn\Http\RequestInterface;
 use Penn\Http\RequestServiceInterface;
+use	Penn\Php\Exception;
 
 class Curl implements RequestInterface, RequestServiceInterface {
 

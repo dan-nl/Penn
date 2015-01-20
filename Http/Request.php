@@ -1,12 +1,14 @@
 <?php
 namespace	Penn\Http;
 
+use Penn\Http\RequestInterface;
+use Penn\Http\Response;
 use Penn\Php\Exception;
 
 abstract class Request implements RequestInterface {
 
 	/**
-	 * @var {\W3C\Http\RequestInterface}
+	 * @var RequestInterface
 	 */
 	protected $RequestService;
 
@@ -23,10 +25,10 @@ abstract class Request implements RequestInterface {
 	 * @param string $url
 	 * the uri to get
 	 *
-	 * @param {object|array|string} $data
+	 * @param object|array|string $data
 	 * data to send in the get
 	 *
-	 * @returns {bool|W3C\Http\Response}
+	 * @returns bool|Response
 	 **/
 	public function get( $url, $data = array() ) {
 		return new Response(
@@ -63,7 +65,7 @@ abstract class Request implements RequestInterface {
 	 * @param {object|array|string} $data
 	 * data to send in the get
 	 *
-	 * @returns {bool|W3C\Http\Response}
+	 * @returns bool|Response
 	 **/
 	public function post( $url = '', $data = array() ) {
 		return new Response(
