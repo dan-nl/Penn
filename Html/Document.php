@@ -110,7 +110,7 @@ class Document {
 	 * @param Style $Style
 	 */
 	public function addStyle( $Style ) {
-		if ( !( $Script instanceof Style ) ) {
+		if ( !( $Style instanceof Style ) ) {
 			error_log( __METHOD__ . '() $Style provided is not a valid Penn\Html\Style' );
 			throw new Exception( 'parameter type error', 1 );
 		}

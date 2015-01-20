@@ -147,7 +147,7 @@ class Exception extends \Exception {
 			case 24: break;
 
 			default:
-				$message = 'unfortunately a technical error occured. a web developer will correct the issue as soon as possible. if you have the time, an error report would be very much appreciated. please describe the situation before the error occurred and indicate the date/time: ' . date( 'r' ) . ' accompanied by error code: ' . $code;
+				$message = 'Unfortunately a technical error occured. A web developer will correct the issue as soon as possible. If you are able to, an error report would be very much appreciated. Please describe the situation before the error occurred and indicate the date/time: ' . date( 'r' ) . ' accompanied by error code: ' . $code;
 				break;
 		}
 
