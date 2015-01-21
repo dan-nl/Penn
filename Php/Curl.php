@@ -3,7 +3,7 @@
  * @link http://php.net/manual/en/book.curl.php
  * @link http://curl.haxx.se/libcurl/
  */
-namespace	Penn;
+namespace	Penn\Php;
 
 use Penn\Http\RequestInterface;
 use Penn\Http\RequestServiceInterface;

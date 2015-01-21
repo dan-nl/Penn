@@ -25,7 +25,8 @@ class Concrete {
 	 */
 	protected function populate( $params = array() ) {
 		if ( !is_array( $params ) ) {
-			throw new Exception( __METHOD__ . '() params provided are not an array' );
+			error_log( __METHOD__ . '() params provided are not an array' );
+			throw new Exception( 'params provided are not an array', 1 );
 		}
 
 		$this->validate();

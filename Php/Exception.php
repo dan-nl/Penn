@@ -136,6 +136,9 @@ class Exception extends \Exception {
 	 * 22 = could not create a cookie
 	 * 23 = a curl error occurred
 	 * 24 = invalid url provided
+	 * 25 = missing required parameter
+	 * 26 = input given not yet handled by the application
+	 * 99 = user nessage
 	 *
 	 * @return string
 	 */
@@ -145,9 +148,10 @@ class Exception extends \Exception {
 		// whether or not to allow the message coming in or substitute it with a standard error message
 		switch ( $code ) {
 			case 24: break;
+			case 99: break;
 
 			default:
-				$message = 'Unfortunately a technical error occured. A web developer will correct the issue as soon as possible. If you are able to, an error report would be very much appreciated. Please describe the situation before the error occurred and indicate the date/time: ' . date( 'r' ) . ' accompanied by error code: ' . $code;
+				$message = 'Unfortunately a technical error occured. A web developer will correct the issue as soon as possible. error code (' . $code . ').';
 				break;
 		}
 

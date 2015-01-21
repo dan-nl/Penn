@@ -16,7 +16,7 @@ abstract class Request implements RequestInterface {
 	/**
 	 * @param array $properties
 	 */
-	public function __construct( array $properties = array() ) {
+	public function __construct( $properties = array() ) {
 		$this->init();
 		$this->populate( $properties );
 	}
@@ -54,8 +54,6 @@ abstract class Request implements RequestInterface {
 		if ( isset( $properties['RequestService'] ) && $properties['RequestService'] instanceof RequestInterface ) {
 			$this->RequestService = $properties['RequestService'];
 		}
-
-		$this->validate();
 	}
 
 	/**
