@@ -38,6 +38,17 @@ class Config {
     return $this->get( $name );
   }
 
+	/**
+	* needed when testing a property with isset() or empty()
+	* on a class property that’s retrieved using __get()
+	*
+	* @param  string $name
+	* @return bool
+	*/
+	public function __isset( $name ) {
+		return isset( $this->data[$name] );
+	}
+
 	public function __toString() {
 		return '';
 	}
