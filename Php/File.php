@@ -301,6 +301,7 @@ class File implements FileAdapterInterface {
 	 * @param array $params
 	 * @param array $params['content']
 	 * @param array $params['filename']
+	 * @param array $params['mode']
 	 * @param array $params['storage_path']
 	 *
 	 * @throws Exception
@@ -313,7 +314,13 @@ class File implements FileAdapterInterface {
 			throw new Exception( 'parameter type error', 1 );
 		}
 
-		$fp = @fopen( $params['storage_path'] . '/' . $params['filename'], 'a' );
+		$mode = 'a';
+
+		if ( !empty( $params['mode'] ) && is_string( $params['mode'] ) ) {
+			$mode = filter_var( $params['mode'], FILTER_SANITIZE_STRING );
+		}
+
+		$fp = @fopen( $params['storage_path'] . '/' . $params['filename'], $mode );
 
 		if ( $fp ) {
 			$bytes = fwrite( $fp, $params['content'] );
