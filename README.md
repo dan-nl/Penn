@@ -1,3 +1,3 @@
-# Penn
+# PennFramework
 
-a basic, lightweight php framework.
+a basic, lightweight, php framework.
