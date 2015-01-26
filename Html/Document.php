@@ -176,6 +176,13 @@ class Document {
 	}
 
 	/**
+	 * @return string
+	 */
+	public function getPageAsCssClass() {
+		return str_replace( '/', '-', $this->page );
+	}
+
+	/**
 	 * @param string $placement
 	 * @return string
 	 */
